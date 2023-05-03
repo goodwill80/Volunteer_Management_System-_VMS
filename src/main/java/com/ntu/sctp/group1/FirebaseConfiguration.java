@@ -53,8 +53,6 @@ public class FirebaseConfiguration {
 //    @Value("classpath:service-account.json")
 //    Resource serviceAccount;
 
-
-
     @Bean
     public FirebaseAuth firebaseAuth() throws IOException {
 
