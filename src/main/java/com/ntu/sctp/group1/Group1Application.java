@@ -37,10 +37,7 @@ public class Group1Application {
 	@Autowired
 	UserRepository userRepo;
 
-//	BasicSessionCredentials awsCreds = new BasicSessionCredentials("access_key_id", "secret_key_id", "session_token");
-//	AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
-//			.withCredentials(new AWSStaticCredentialsProvider(awsCreds))
-//			.build();
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(Group1Application.class, args);
