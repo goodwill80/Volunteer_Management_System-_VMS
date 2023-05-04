@@ -50,9 +50,6 @@ public class FirebaseConfiguration {
     @Value("${client_x509_cert_url}")
     private String client_x509_cert_url;
 
-//    @Value("classpath:service-account.json")
-//    Resource serviceAccount;
-
     @Bean
     public FirebaseAuth firebaseAuth() throws IOException {
 
