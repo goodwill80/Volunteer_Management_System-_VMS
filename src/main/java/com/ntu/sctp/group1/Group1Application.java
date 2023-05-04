@@ -31,8 +31,7 @@ public class Group1Application {
 	@Autowired
 	EnrolmentRepository enrolmentRepository;
 
-//	@Autowired
-//	AvailabilityRepository availRepo;
+
 
 	@Autowired
 	UserRepository userRepo;
