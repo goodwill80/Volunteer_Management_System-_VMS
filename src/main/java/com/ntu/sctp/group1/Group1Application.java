@@ -46,7 +46,7 @@ public class Group1Application {
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
-			@overide
+			@Override
 			public void addCorsMappings(@NonNull CorsRegistry registry) {
 				registry.addMapping("/**").allowedOrigins("http://localhost:3000");
 			}
