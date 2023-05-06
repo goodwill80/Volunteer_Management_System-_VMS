@@ -61,7 +61,7 @@ public class EnrolmentController {
     public ResponseEntity<?> addVolunteer(@RequestParam int volunteer_id, @RequestParam int program_id){
         try{
             enrolmentService.addVolunteer(volunteer_id, program_id);
-            return ResponseEntity.ok().body("volunteer added successful");
+            return ResponseEntity.ok().body("volunteer added successfully");
         }catch (NoVolunteerFoundExceptions | NoEnrolmentFoundExceptions ex) {
             ex.printStackTrace();
             return ResponseEntity.notFound().build();
@@ -71,14 +71,27 @@ public class EnrolmentController {
         }
     }
 
+    @PutMapping("/admin/enrolments/unenrol")
+    public ResponseEntity<?> removeVolunteer(@RequestParam Integer volunteerId, @RequestParam Integer programId ) {
+        try {
+            enrolmentService.removeVolunteerFromEnrolment(volunteerId, programId);
+            return ResponseEntity.ok().body("volunteer removed successfully");
+        } catch (NoEnrolmentFoundExceptions | NoVolunteerFoundExceptions ex) {
+            ex.printStackTrace();
+            return ResponseEntity.notFound().build();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return ResponseEntity.badRequest().body(new Status(ex.getMessage(),false));
+        }
+    }
+
     @GetMapping ("/admin/enrolments/volunteers")
     public ResponseEntity<?> getAllVolunteer(@RequestParam int program_id){
         try{
             return ResponseEntity.ok().body(enrolmentService.getAllVolunteer(program_id));
-        }catch (NoEnrolmentFoundExceptions ex) {
-            ex.printStackTrace();
+        } catch(NoEnrolmentFoundExceptions ex) {
             return ResponseEntity.notFound().build();
-        }catch (Exception ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
             return ResponseEntity.badRequest().body(new Status(ex.getMessage(),false));
         }

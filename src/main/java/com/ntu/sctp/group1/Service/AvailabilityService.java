@@ -111,11 +111,11 @@ public class AvailabilityService {
 
     // Added on 31 Mar
     public List<Availability> getAllAvailabilities() throws NoAvailabilityFoundExceptions {
-        List<Availability> allAvails = availabilityRepo.findAll();
-        if(allAvails.isEmpty()) {
-            throw new NoAvailabilityFoundExceptions("There is no availability found!");
-        }
-        return allAvails;
+//        List<Availability> allAvails = availabilityRepo.findAll();
+//        if(allAvails.isEmpty()) {
+//            throw new NoAvailabilityFoundExceptions("There is no availability found!");
+//        }
+        return  availabilityRepo.findAll();
     }
 
 }

@@ -97,4 +97,21 @@ public class EnrolmentService {
         }
     }
 
+    public void removeVolunteerFromEnrolment (Integer volunteerId, Integer programId ) throws NoEnrolmentFoundExceptions, NoVolunteerFoundExceptions {
+        Optional<Enrolment> enrolment = enrolmentRepository.findByProgramId(programId);
+        Optional <Volunteer> volunteer = volunteerRepository.findById(volunteerId);
+
+        if(enrolment.isEmpty()) {
+            throw new NoEnrolmentFoundExceptions("Enrolment with program id of " + programId + " cannot be found!" );
+        }
+
+        if(volunteer.isEmpty()) {
+            throw new NoVolunteerFoundExceptions(("Volunteer with id of " + volunteerId + " cannot be found!"));
+        }
+        Enrolment enrolmentFound = enrolment.get();
+
+        enrolmentFound.getVolunteers().remove(volunteer.get());
+        enrolmentRepository.save(enrolmentFound);
+    }
+
 }

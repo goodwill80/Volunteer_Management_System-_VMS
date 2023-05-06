@@ -102,9 +102,11 @@ public class AvailabilityController {
     public ResponseEntity<?> getAllAvailabilities () {
         try {
             return ResponseEntity.ok().body(availabilityService.getAllAvailabilities());
-        } catch(NoAvailabilityFoundExceptions ex) {
-            return ResponseEntity.notFound().build();
-        } catch(Exception ex) {
+        }
+//        catch(NoAvailabilityFoundExceptions ex) {
+//            return ResponseEntity.notFound().build();
+//        }
+        catch(Exception ex) {
             return ResponseEntity.internalServerError().body(new Status(ex.getMessage(), false));
         }
     }
