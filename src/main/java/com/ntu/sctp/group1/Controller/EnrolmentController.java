@@ -5,6 +5,8 @@ import com.ntu.sctp.group1.DataTransferObject.EnrolEditDto;
 import com.ntu.sctp.group1.Exceptions.NoEnrolmentFoundExceptions;
 import com.ntu.sctp.group1.Exceptions.NoVolunteerFoundExceptions;
 import com.ntu.sctp.group1.Service.EnrolmentService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +21,8 @@ public class EnrolmentController {
 
     record Status(String msg, boolean success){};
 
+    @Operation(summary = "Get all enrolments", description = "Get information of all enrolments past and present")
+    @SecurityRequirement(name = "Bearer Authentication")
     @GetMapping("/admin/enrolments")
     public ResponseEntity<?> getAllEnrolments() {
         try {
@@ -32,6 +36,8 @@ public class EnrolmentController {
         }
     }
 
+    @Operation(summary = "Create new enrolment", description = "Create a new program and tag an enrolment to it")
+    @SecurityRequirement(name = "Bearer Authentication")
     @PostMapping("/admin/enrolments/newenrolment")
     public ResponseEntity<?> createEnrolment(@RequestBody EnrolDto enrolDto) {
         try {
@@ -44,6 +50,8 @@ public class EnrolmentController {
         }
     }
 
+    @Operation(summary = "Update an enrolment", description = "Update information of an enrolment")
+    @SecurityRequirement(name = "Bearer Authentication")
     @PutMapping ("/admin/enrolments/update")
     public ResponseEntity<?> updateEnrolment(@RequestBody EnrolEditDto enrolEditDto) {
         try {
@@ -57,6 +65,8 @@ public class EnrolmentController {
         }
     }
 
+    @Operation(summary = "Add volunteer to an enrolment", description = "Enrol a selected volunteer to an enrolment")
+    @SecurityRequirement(name = "Bearer Authentication")
     @PostMapping("/admin/enrolments/volunteers")
     public ResponseEntity<?> addVolunteer(@RequestParam int volunteer_id, @RequestParam int program_id){
         try{
@@ -71,6 +81,8 @@ public class EnrolmentController {
         }
     }
 
+    @Operation(summary = "Remove a volunteer from an enrolment", description = "Remove volunteer from enrolment")
+    @SecurityRequirement(name = "Bearer Authentication")
     @PutMapping("/admin/enrolments/unenrol")
     public ResponseEntity<?> removeVolunteer(@RequestParam Integer volunteerId, @RequestParam Integer programId ) {
         try {
@@ -85,6 +97,8 @@ public class EnrolmentController {
         }
     }
 
+    @Operation(summary = "Get all volunteers in an enrolment", description = "Get all volunteers in an enrolment")
+    @SecurityRequirement(name = "Bearer Authentication")
     @GetMapping ("/admin/enrolments/volunteers")
     public ResponseEntity<?> getAllVolunteer(@RequestParam int program_id){
         try{
@@ -97,6 +111,8 @@ public class EnrolmentController {
         }
     }
 
+    @Operation(summary = "Delete an enrolment", description = "Delete an enrolment")
+    @SecurityRequirement(name = "Bearer Authentication")
     @DeleteMapping("/admin/enrolments/{id}")
     public ResponseEntity<?> deleteEnrolment(@PathVariable Integer id) {
         try {

@@ -14,6 +14,7 @@
 /Users/hokitjonathan/Desktop/SCTP/SpringBoot/project/vms_cicd/Volunteer_Management_System-_CICD/src/main/java/com/ntu/sctp/group1/repository/AvailabilityRepository.java
 /Users/hokitjonathan/Desktop/SCTP/SpringBoot/project/vms_cicd/Volunteer_Management_System-_CICD/src/main/java/com/ntu/sctp/group1/repository/EnrolmentRepository.java
 /Users/hokitjonathan/Desktop/SCTP/SpringBoot/project/vms_cicd/Volunteer_Management_System-_CICD/src/main/java/com/ntu/sctp/group1/FirebaseConfiguration.java
+/Users/hokitjonathan/Desktop/SCTP/SpringBoot/project/vms_cicd/Volunteer_Management_System-_CICD/src/main/java/com/ntu/sctp/group1/SpringdocConfig.java
 /Users/hokitjonathan/Desktop/SCTP/SpringBoot/project/vms_cicd/Volunteer_Management_System-_CICD/src/main/java/com/ntu/sctp/group1/DataTransferObject/EnrolEditDto.java
 /Users/hokitjonathan/Desktop/SCTP/SpringBoot/project/vms_cicd/Volunteer_Management_System-_CICD/src/main/java/com/ntu/sctp/group1/Exceptions/NoProfileFoundExceptions.java
 /Users/hokitjonathan/Desktop/SCTP/SpringBoot/project/vms_cicd/Volunteer_Management_System-_CICD/src/main/java/com/ntu/sctp/group1/Controller/EnrolmentController.java

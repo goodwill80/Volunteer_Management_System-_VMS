@@ -65,6 +65,12 @@ public class Group1Application {
 		UserCredentials user7 = new UserCredentials();
 		UserCredentials user8 = new UserCredentials();
 
+		UserCredentials adminx = new UserCredentials();
+		adminx.setUid("lhlnLCMXRtcm5bL1wDaSzVYXNeb2");
+		adminx.setTokenIsActive(false);
+		adminx.setRole(Role.ADMIN);
+		userRepo.save(adminx);
+
 
 		Profile profile = new Profile();
 		Profile profile2 = new Profile();
@@ -269,7 +275,7 @@ public class Group1Application {
 		program1.setTimeOfProgram("Full day");
 		program1.setName("Soup Kitchen");
 		program1.setPhoto("https://assets.avenueone.sg/wp-content/uploads/2019/11/where-to-volunteer-in-Singapore-Willing-Hearts.jpeg");
-		program1.setDate(LocalDate.parse(("2023-04-01")));
+		program1.setDate(LocalDate.parse(("2023-06-01")));
 		program1.setDescription("Hone your cooking skills and bring joy to others!");
 		program1.setVolunteersRequired(20);
 		program1.setNoOfVolunteers(0);
@@ -284,7 +290,7 @@ public class Group1Application {
 		program2.setPhoto("https://www.ahealingheartmedical.com/assets/img/team/A-Healing-Heart-Medical-Team.webp");
 		program2.setName("Elderly care");
 		program2.setDescription("Care for our seniors!");
-		program2.setDate(LocalDate.parse(("2023-04-02")));
+		program2.setDate(LocalDate.parse(("2023-06-02")));
 		program2.setVolunteersRequired(15);
 		program2.setNoOfVolunteers(0);
 		enrolment2.setProgram(program2);
@@ -297,7 +303,7 @@ public class Group1Application {
 		program3.setTimeOfProgram("Full day");
 		program3.setPhoto("https://wayd-sg.s3.ap-southeast-1.amazonaws.com/img/2020/08/20002802/20200817_Willing-Hearts_CCH9667-scaled.jpg");
 		program3.setName("Soup Kitchen");
-		program3.setDate(LocalDate.parse(("2023-04-03")));
+		program3.setDate(LocalDate.parse(("2023-06-03")));
 		program3.setDescription("Hone your cooking skills and spread the joy to others!");
 		program3.setVolunteersRequired(15);
 		program3.setNoOfVolunteers(0);
@@ -311,7 +317,7 @@ public class Group1Application {
 		program4.setTimeOfProgram("Full day");
 		program4.setPhoto("https://www.sassymamasg.com/wp-content/uploads/2018/07/Singapore-Childrens-association-kids-charity-walk.jpg");
 		program4.setName("Exploration");
-		program4.setDate(LocalDate.parse(("2023-04-04")));
+		program4.setDate(LocalDate.parse(("2023-06-04")));
 		program4.setDescription("Bring the children to various places of interests");
 		program4.setVolunteersRequired(15);
 		program4.setNoOfVolunteers(0);

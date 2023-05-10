@@ -6,6 +6,9 @@ import com.ntu.sctp.group1.Service.ProfileService;
 import com.ntu.sctp.group1.Service.VolunteerService;
 import com.ntu.sctp.group1.entity.Profile;
 import com.ntu.sctp.group1.entity.Volunteer;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +27,8 @@ import java.util.Map;
     ProfileService profileService;
 
     record Message(String message, boolean success){}
-
+        @Operation(summary = "Get information of all Volunteers", description = "Information of all volunteers")
+        @SecurityRequirement(name = "Bearer Authentication")
         @GetMapping("/admin/volunteers")
         public ResponseEntity<?> getAllVolunteers() {
             try {
@@ -37,7 +41,8 @@ import java.util.Map;
                 return ResponseEntity.badRequest().body(new Message(ex.getMessage(),false));
             } 
         }
-
+        @Operation(summary = "Get volunteer by ID", description = "Get a volunteer's information by providing an ID")
+        @SecurityRequirement(name = "Bearer Authentication")
         @GetMapping("/admin/volunteers/{id}")
         public ResponseEntity<?> getVolunteerById(@PathVariable int id) throws NoVolunteerFoundExceptions {
             try {
@@ -52,6 +57,8 @@ import java.util.Map;
             }
         }
 
+        @Operation(summary = "Search volunteers by params", description = "Filter volunteers by search text")
+        @SecurityRequirement(name = "Bearer Authentication")
         @GetMapping("/admin/volunteers/search")
         public ResponseEntity<List<Volunteer>> searchByParams (@RequestParam Map<String, String> params) {
             try {
@@ -64,7 +71,8 @@ import java.util.Map;
 
 
 
-
+        @Operation(summary = "Update volunteer information", description = "Update a volunteer's information")
+        @SecurityRequirement(name = "Bearer Authentication")
         @PutMapping("/volunteers/{id}")
         public ResponseEntity<?> updateVolunteer(@PathVariable int id, @RequestBody Volunteer updatedVolunteer) {
             try {
@@ -79,6 +87,8 @@ import java.util.Map;
             }
         }
 
+        @Operation(summary = "Delete a volunteer", description = "Delete volunteer from database")
+        @SecurityRequirement(name = "Bearer Authentication")
         @DeleteMapping("/admin/volunteers/{id}")
         public ResponseEntity<?> deleteVolunteer(@PathVariable int id) {
 
@@ -95,7 +105,8 @@ import java.util.Map;
 
         }
 
-
+        @Operation(summary = "Get all profiles of volunteers", description = "Volunteers' profiles")
+        @SecurityRequirement(name = "Bearer Authentication")
         @GetMapping("/admin/volunteers/profiles")
         public ResponseEntity<?> getAllProfiles() {
             try {
@@ -112,6 +123,8 @@ import java.util.Map;
         }
 
         // ADDED ON 29 MAR
+        @Operation(summary = "Get enrolments of a volunteer", description = "Volunteer's enrolments")
+        @SecurityRequirement(name = "Bearer Authentication")
         @GetMapping("/volunteers/{id}/enrolments")
         public ResponseEntity<?> findEnrolmentsOfVolunteer(@PathVariable int id) {
             try {

@@ -65,9 +65,7 @@ public class FirebaseConfiguration {
         firebaseCredentials.setToken_uri(token_uri);
         firebaseCredentials.setAuth_provider_x509_cert_url(auth_provider_x509_cert_url);
         firebaseCredentials.setClient_x509_cert_url(client_x509_cert_url);
-
-
-
+        
         ObjectMapper mapper = new ObjectMapper();
         String jsonString = mapper.writeValueAsString(firebaseCredentials);
         InputStream targetStream = new ByteArrayInputStream(jsonString.getBytes());
@@ -78,10 +76,7 @@ public class FirebaseConfiguration {
                 .build();
 
         var firebaseApp = FirebaseApp.initializeApp(options);
-
-
         return FirebaseAuth.getInstance(firebaseApp);
-
 
     }
 }

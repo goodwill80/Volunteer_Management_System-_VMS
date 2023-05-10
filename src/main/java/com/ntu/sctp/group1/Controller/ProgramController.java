@@ -4,6 +4,8 @@ import com.ntu.sctp.group1.DataTransferObject.ProgramDto;
 import com.ntu.sctp.group1.Exceptions.NoProgramFoundExceptions;
 import com.ntu.sctp.group1.Service.ProgramService;
 import com.ntu.sctp.group1.entity.Program;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,19 +22,20 @@ public class ProgramController {
     record Message(String message, boolean success) {
     }
 
+    @Operation(summary = "Get all programs", description = "Get all programs")
+    @SecurityRequirement(name = "Bearer Authentication")
     @GetMapping("/admin/programs")
     public ResponseEntity<?> getAllPrograms() {
         try {
             return ResponseEntity.ok().body(programService.getAllPrograms());
-        } catch (NoProgramFoundExceptions ex) {
-            ex.printStackTrace();
-            return ResponseEntity.badRequest().body(new Message(ex.getMessage(), false));
         } catch (Exception ex) {
             ex.printStackTrace();
             return ResponseEntity.badRequest().body(new Message(ex.getMessage(), false));
         }
     }
 
+    @Operation(summary = "Get a program by ID", description = "Get program by ID")
+    @SecurityRequirement(name = "Bearer Authentication")
     @GetMapping("/admin/programs/{id}")
     public ResponseEntity<?> getProgramById(@PathVariable Integer id) {
         try {
@@ -46,6 +49,8 @@ public class ProgramController {
         }
     }
 
+    @Operation(summary = "Create a new program", description = "Create a new program")
+    @SecurityRequirement(name = "Bearer Authentication")
     @PostMapping("/admin/newprogram")
     public ResponseEntity<?> createProgram(@RequestBody ProgramDto newProgram) {
         try {
@@ -59,6 +64,8 @@ public class ProgramController {
         }
     }
 
+    @Operation(summary = "Update a program", description = "Update a program by ID")
+    @SecurityRequirement(name = "Bearer Authentication")
     @PutMapping("/admin/programs/{id}")
     public ResponseEntity<?> updateProgram(@PathVariable Integer id, @RequestBody ProgramDto updatedProgram) {
         try {
@@ -72,6 +79,8 @@ public class ProgramController {
         }
     }
 
+    @Operation(summary = "Delete a program", description = "Delete a program by ID")
+    @SecurityRequirement(name = "Bearer Authentication")
     @DeleteMapping("/admin/programs/{id}")
     public ResponseEntity<?> deleteProgram(@PathVariable Integer id) {
         try {

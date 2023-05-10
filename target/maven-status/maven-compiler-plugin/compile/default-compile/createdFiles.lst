@@ -37,6 +37,7 @@ com/ntu/sctp/group1/Controller/ProfileController$Message.class
 com/ntu/sctp/group1/Controller/AvailabilityController.class
 com/ntu/sctp/group1/Service/VolunteerService.class
 com/ntu/sctp/group1/Exceptions/UnauthorisedRoleExceptions.class
+com/ntu/sctp/group1/SpringdocConfig.class
 com/ntu/sctp/group1/Service/ProgramService.class
 com/ntu/sctp/group1/DataTransferObject/UidDto.class
 com/ntu/sctp/group1/Exceptions/NoEnrolmentFoundExceptions.class
