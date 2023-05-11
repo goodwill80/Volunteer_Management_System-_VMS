@@ -22,7 +22,7 @@ Coming soon!
 ![My Image](RelationalDiagrams.png)
 
 ### Authentication & Authorization Flow between front-end and backend
-1. Using Firebase Auth JWT for authentication and authorization.
+1. Firebase Auth for authentication and authorization.
 2. Setup Security Filter Chain and Firbase filter to verify all requests which require JWT token.
 
 ![My Image](Auth_process.png)
