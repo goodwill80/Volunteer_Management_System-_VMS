@@ -8,20 +8,21 @@
 4. You can proceed to test the routes.
 
 ## Description
+### App Summary
+1. A full-stack digital platform for new volunteer signups along with a CRM dashboard to enable staff to administer new programs and enrol new volunteers.
+2. This is a pro-bono project done to help a local charity organization to administer volunteers' signup, as well as manage its programs more efficiently. A simple process streamlining was performed to migrate some of the manual taskes commonly performed by staff to a digital platform.
+3. Tech stacks - ReactJS with TypeScript, React Query, Tailwind CSS, Spring-Boot and Spring Security + Firebase Auth.
+4. Deployment pipeline - GitHub, AWS code pipeline and AWS MySql RDS.
+
 
 ### Relational Diagrams
-
 ![My Image](RelationalDiagrams.png)
 
 ### Authentication & Authorization Flow between front-end and backend
-
 1. Using Firebase Auth JWT for authentication and authorization.
 2. Setup Security Filter Chain and Firbase filter to verify all requests which require JWT token.
 
 ![My Image](Auth_process.png)
-
-
-## Important to note before using the app:
 
 ## Team
 
