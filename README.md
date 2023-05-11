@@ -12,7 +12,7 @@
 4. Proceed to test the routes.
 5. H2 Database can be accessed via http://localhost:8080/h2
 
-## Required info(below) to connect H2
+Required info(below) to connect H2
 ![My Image](H2_login.png)
 
 
