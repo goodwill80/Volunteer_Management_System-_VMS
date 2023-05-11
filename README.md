@@ -16,6 +16,7 @@ Coming soon!
 2. This is a pro-bono project done to help a local charity organization to administer volunteers' signup, as well as manage its programs more efficiently. A simple process streamlining was performed to migrate some of the manual taskes commonly performed by staff to a digital platform.
 3. Tech stacks - ReactJS with TypeScript, React Query, Tailwind CSS, Spring-Boot and Spring Security + Firebase Auth.
 4. Deployment pipeline - GitHub, AWS code pipeline and AWS MySql RDS.
+5. App in test environment (on port 8080) is using H2 in-memory database. 
 
 
 ### Relational Diagrams
