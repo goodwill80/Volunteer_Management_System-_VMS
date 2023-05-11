@@ -9,7 +9,7 @@
 
 ## Description
 
-### Relational Diagrams
+## Relational Diagrams
 ![My Image](RelationalDiagrams.png)
 
 ### Authentication & Authorization Flow between front-end and backend
