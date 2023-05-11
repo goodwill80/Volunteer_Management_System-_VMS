@@ -24,7 +24,7 @@
 
 ![My Image](Auth_process.png)
 
-## Team
+## Team Members
 
 - [Jonathan](https://github.com/goodwill80 "jonathan's github")
 - [Ace](https://github.com/acetay "ace's github")
