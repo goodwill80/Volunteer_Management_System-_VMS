@@ -2,7 +2,7 @@
 
 ## Steps to test the API Routes using Swagger
 
-<span style="color: green"> Some green text </span>
+
 
 *** Control + click on any hyperlink to open a seperate tab on your browser
 
