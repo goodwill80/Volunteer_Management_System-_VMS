@@ -6,7 +6,7 @@
 
 *** Control + click on any hyperlink to open a seperate tab on your browser
 
-1. RUN "docker run -p 8080:8080 goodwill80/vms-springboot:v1.0.1" (PLEASE DO THIS FIRST!)
+1. RUN # "docker run -p 8080:8080 goodwill80/vms-springboot:v1.0.1"[Blue](#) (PLEASE DO THIS FIRST!)
 2. Go to https://delicate-kangaroo-fe57dd.netlify.app/ to generate a bearer token from Firebase, and copy the token to clipboard.
 3. Go to http://localhost:8080/swagger-ui/index.html and paste the token in "Authorized" tab.
 4. Proceed to test the routes.
