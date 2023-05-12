@@ -37,7 +37,7 @@ Coming soon!
 
 ![My Image](Auth_process.png)
 
-### Deployment Pipeline implemented
+### CICD Pipeline implemented
 1. Github (Code Repository)
 2. AWS Elastic Registry Service (Image Repository with vulnerability scan)
 3. AWS Elastic Container Service - Fargate (with Load balancer and auto-scale)
