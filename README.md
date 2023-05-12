@@ -37,6 +37,17 @@ Coming soon!
 
 ![My Image](Auth_process.png)
 
+### Deployment Pipeline implemented
+1. Github (Code Repository)
+2. AWS CodePipeline
+3. AWS Elastic Registry Service (Image Repository)
+4. AWS RDS MySQL (Database)
+5. AWS Paramerstore (Credential Management)
+6. AWS Fargate (with Load balancer and auto-scale)
+
+### Pipeline illustration (image src: https://vtimd.medium.com/aws-codepipeline-the-good-and-the-bad-2bd607102c2)
+![My Image](DeploymentPipeline.png)
+
 ## Team Members
 
 - [Jonathan](https://github.com/goodwill80 "jonathan's github")
