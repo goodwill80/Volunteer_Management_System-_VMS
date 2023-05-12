@@ -45,7 +45,8 @@ Coming soon!
 5. AWS CodePipeline (CodeBuild)
 7. Deployment - AWS Fargate (with Load balancer and auto-scale)
 
-### Pipeline illustration (image src: https://vtimd.medium.com/aws-codepipeline-the-good-and-the-bad-2bd607102c2)
+### Pipeline illustration 
+image src: https://vtimd.medium.com/aws-codepipeline-the-good-and-the-bad-2bd607102c2)
 ![My Image](DeploymentPipeline.png)
 
 ## Team Members
