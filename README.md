@@ -40,9 +40,9 @@ Coming soon!
 ### Deployment Pipeline implemented
 1. Github (Code Repository)
 2. AWS Elastic Registry Service (Image Repository with vulnerability scan)
-3. AWS Paramerstore (Credential Management)
-4. AWS CodePipeline (CodeBuild + Deploy)
-5. Deployment - AWS Fargate (with Load balancer and auto-scale)
+3. AWS Elastic Container Service - Fargate (with Load balancer and auto-scale)
+4. AWS Paramerstore (Credential Management)
+5. AWS CodePipeline (CodeBuild + Deploy)
 6. AWS RDS MySQL (Database)
 
 ### Pipeline illustration 
