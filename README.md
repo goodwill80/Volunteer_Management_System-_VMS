@@ -17,8 +17,8 @@ Required info(below) to connect H2
 
 
 ## Link to front-end (Demo)
-Coming soon!
-For frontend repository, refer to https://github.com/goodwill80/Volunteer_Management_System_VMS_Frontend
+1. Coming soon!
+2. For frontend repository, refer to https://github.com/goodwill80/Volunteer_Management_System_VMS_Frontend
 
 ## Description
 ### App Summary
