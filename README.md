@@ -34,7 +34,8 @@ Required info(below) to connect H2
 
 ### Authentication & Authorization Flow between front-end and backend
 1. Firebase Auth for authentication and authorization.
-2. Setup Security Filter Chain and Firbase filter to verify all requests which require JWT token.
+2. Setup Security Filter Chain and Firebase filter (in backend) to validate/verify all API requests, which require a JWT token.
+
 
 ![My Image](Auth_process.png)
 
