@@ -44,7 +44,7 @@ Required info(below) to connect H2
 2. AWS Elastic Registry Service (Image Repository with vulnerability scan)
 3. AWS Elastic Container Service - Fargate (with Load balancer and auto-scale)
 4. AWS Paramerstore (Credential Management)
-5. AWS CodePipeline (CodeBuild + Deploy)
+5. AWS CodePipeline (Github > CodeBuild > AWS Image Repo - ERS > Deploy)
 6. AWS RDS MySQL (Database)
 
 ### Pipeline illustration 
